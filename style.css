@@ -7,17 +7,19 @@ coloque nas sessões indicadas*/
 :root{
     /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
     /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
-   --cor-de-fundo: #F5F5F5;
-   --cor-de-link: #000;
+   --color-fondo: #F5F5F5;
+   --color-de-link: #000;
    --gray:#EDEDED;
-   --blue:#2A7AE4;
-   --cor-de-fundo-light: #EAF2FD;
-   --cor-click:#FFFFFF
+   --title-color:#5AA5C2;
+   --color-fondo-light: #EAF2FD;
+   --color-click:#FFFFFF
+   --text-color:black;
+   --white: #FFFFFF;
 }
 
 body {
     box-sizing: border-box;
-    background-color: var(--cor-de-fundo) ;
+    background-color: var(--color-fondo) ;
     font-family: 'Raleway';
     margin: 0;
     padding: 0; 
@@ -29,9 +31,12 @@ ol, ul,li {
 }
 a{
     text-decoration: none;
-    color: var(--cor-de-link);
+    color: var(--color-de-link);
 }
 
+h3{
+    color: var(--text-color);
+}
 
 
 /*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
@@ -51,14 +56,16 @@ https://en.bem.info/methodology/quick-start/*/
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;    
 }
 
-section.menu{  
-    width: 90%;    
+
+section.menu{
+    width: 90%;
     height: 50px;
-    display: flex;    
-    justify-content: space-between;
+    display: flex;
+    justify-content: space-between;        
+  
 }
 
 .menu__header{         
@@ -73,15 +80,20 @@ section.menu{
 }
 
 .menu__title{
-    transition-property: color;    
-    transition-duration: 3s;
-    transition-timing-function: ease-in-out;    
-    transition-delay: 2s;
+    animation-name: change_text_color;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;  
+    animation-delay: 1s;   
+
 }
 
-.menu__title{
-    color: var(--blue);    
+@keyframes change_text_color{
+    0%{color: var(--title-color);}
+    50%{color:#83dee0;}
+    100%{color:var(--title-color);}
 }
+
 
 nav{
     width: 60%;   
@@ -92,18 +104,22 @@ nav{
 .menu__list{   
     display: none;
 }
+
+.menu__list__item__contato{
+    color: var(--text-color);
+}
 /*Sección Title*/
 
 section.title{    
     width: 90%;
-    padding-top: 48px;
+    padding-top: 48px;     
 }
+
 
 .title__div{
     width: 100%;
     display: flex;  
-    flex-direction: column;   
-    padding-bottom: 52px;
+    flex-direction: column;    
 }
 
 
@@ -116,19 +132,14 @@ section.title{
     -o-border-radius: 50px;
 }
 
-.title__bio{    
-    transition-property: color;    
-    transition-duration: 2s;
-    transition-timing-function: ease-in;    
-    transition-delay: 3s; 
-}
-
 .title__bio{
-    color: var(--blue);
+    color: var(--title-color);
+    
 }
 
 .title__container{
     width: 100%;
+    color: var(--text-color);
 }
 .title__subsection{
     font-weight: 100;
@@ -137,39 +148,47 @@ section.title{
     text-align: justify;
 }
 .title__network{
-    width: 100%;
+    width:100%;
     display: flex;
     justify-content: space-between;    
 }
+
+.title__network img{
+    width: 9px;
+    height: 9px;
+}
+
+
 .title__network__item{
     padding-right: 8px;
     padding-top: 16px;
 }
 
-
 .title__network__item a{
-    transition-property: color;    
-    transition-duration: 2s;
-    transition-timing-function: ease-in-out;    
-    transition-delay: 4s; 
-}
-
-.title__network__item a{
-    color: var(--blue);
+    animation-name: change_text_color;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;  
+    animation-delay: 1s;
 }
 
 
 /*Sección About*/
 
-section.about{    
+section.about{
     width: 100%;
-    background-color: var(--cor-de-fundo-light);
+    background-color: var(--color-fondo-light);
+    animation: size linear both;
+    animation-timeline:view();
+    animation-range: entry 20% cover 50%;     
 }
 
 .about__container{   
     width: 90%;
-    margin: 0 auto;    
+    margin: 0 auto; 
+    color: var(--text-color);  
 }
+
 
 .about__paragraph{  
     text-align: justify;
@@ -185,35 +204,54 @@ section.skills, section.hobbies{
     flex-direction: column;
     align-items: center;
     padding-bottom: 16px;
+    animation: size linear both;
+    animation-timeline:view();
+    animation-range: entry 20% cover 50%;     
+    
 }
 
 .material-icons{
-    color: var(--blue);     
+    color: blue;     
 }
 
 .skills__line, .hobbies__line{
-    width: 100%;
+    width: 100%;    
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;   
-    gap: 8px;     
+    gap: 24px;        
 }
 
 
 .skills__box, .hobbies__box{
-    display: flex;  
+    display: flex;
     width: 180px;
     height: 118px;
-    flex-grow: 2;  
-    background-color: white;   
+    flex-grow: 2;
+    background-color: var(--color-fondo-light);
+    color: var(--text-color);
+    border-style: dotted;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 
 .skills__box ul, .hobbies__box ul{
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;  
-    gap: 16px;      
-    padding-left: 16px;
+    justify-content: flex-end;
+    width: 40%;
+    gap: 16px;
+    padding: 16px;
+    margin: 16px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    
 }
 
 
@@ -222,10 +260,27 @@ section.skills, section.hobbies{
 
 section.academic{
     width: 100%;
-    background-color: var(--cor-de-fundo-light);
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: size linear both;
+    animation-timeline:view();
+    animation-range: entry 20% cover 50%;   
+}
+
+@keyframes size{
+    from{
+        scale: 0.8;
+        translate: 0 30px;  
+        opacity: 0.5;
+        
+    }
+    to{
+        scale:1;        
+        translate: 0 0px;
+        opacity: 1;
+
+    }
 }
 
 .academic__courses{
@@ -233,32 +288,51 @@ section.academic{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 16px;    
+}
+
+.academic__courses__list{
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    background-color: var(--color-fondo-light);
+    color: var(--text-color);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    
 }
 
 .academic__courses__box{
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
     flex-grow: 1;
-    width: 330px;        
+    width: 330px;   
 }
-
-
 
 .academic__courses__item__img{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 118px;
-    background-color: white;      
+    height: 150px;
+    background-color:white;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 .academic__courses__item__img img{
-    width:35%;  
+    width:80%;   
 }
 
 .academic__courses__item__title h4{
     margin: 8px 0 8px 0;
+    padding-top: 8px;
 }
 
 /* experiencia*/
@@ -277,15 +351,37 @@ section.experience{
 }
 
 .experience__box{
-    width: 100%;     
+    width: 100%;
     display: flex;
-    flex-direction: column;   
-    gap: 16px;   
+    flex-direction: column;
+    gap: 16px;      
+    color: var(--text-color); 
 }
 
 .experience__img{
-    width: 80%;
-    align-self: center;
+    animation: reveal linear both ;
+    animation-timeline:view();
+    animation-range: entry 20% cover 50%;    
+}
+
+
+@keyframes reveal{
+    from{
+        opacity:0;
+        translate: 0 100px;
+    }
+    to{
+        opacity: 1;
+        translate: 0 0px;
+    }
+
+}
+
+.experience__img{
+    max-width: 80%;
+    height: auto;
+    align-self: center;    
+    
 }
 
 .experience__title{
@@ -296,67 +392,52 @@ section.experience{
     font-weight: 100;
 }
 
-.experience__repo button, .experience__demo button{
+.experiencia__botao--repo, .experience__botao--demo, .formcontato__botao {
     width: 120px;
     height: 40px;
     margin-right: 8px;
     padding: 0;
     border-radius: 25px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    -ms-border-radius: 25px;
-    -o-border-radius: 25px;
-}
-
-
-
-
-.experience__repo button:hover, .experience__demo button:hover{
-    cursor: pointer;
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
+    transition-property: scale;  
+    transition-duration:3s;  
 }
 
 .experiencia__botao--repo{
-    color: var(--blue);
-    border: 1px solid var(--blue);
-    background-color: var(--cor-de-fundo);
-    border-radius: 25px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    -ms-border-radius: 25px;
-    -o-border-radius: 25px;
-    transition:900ms;
+    color: var(--title-color);
+    border: 1px solid var(--title-color);
+    background-color: var(--color-fondo);       
 }
 
 
-.experience__botao--demo{
-    color: white;
-    background-color: var(--blue);
+.experience__botao--demo, .formcontato__botao{
+    color:var(--white);
+    background-color: var(--title-color);
     border: none;
-    border-radius: 25px ;
-    -webkit-border-radius: 25px ;
-    -moz-border-radius: 25px ;
-    -ms-border-radius: 25px ;
-    -o-border-radius: 25px ;
-    transition:950ms;
-    -webkit-transition:950ms;
-    -moz-transition:950ms;
-    -ms-transition:950ms;
-    -o-transition:950ms;
+}
+.formcontato__botao{
+    margin-top: 8px;
+
+   
+
+}
+
+.experience__repo button:hover, .experience__demo button:hover, .formcontato__botao:hover{
+    cursor: pointer;
+    transform: scale(1.1);
 }
  
 /*Contacto*/
 
 section.formcontato{
     width: 100%;
-    background-color: var(--cor-de-fundo-light);
+    background-color: var(--color-fondo);
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: size linear both;
+    animation-timeline:view();
+    animation-range: entry 20% cover 50%;  
+    color: var(--text-color);
 }
 
 .formcontato__contacto{
@@ -369,13 +450,12 @@ section.formcontato{
 .formcontato__subtext{
     font-weight: 100;
     text-align: justify;
-
 }
 
 .formcontato__form{       
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 8px;    
 }
 
 .formcontato__input{
@@ -388,6 +468,7 @@ section.formcontato{
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
     padding: 16px;
+    
 }
 
 .formcontato__textarea{
@@ -401,46 +482,18 @@ section.formcontato{
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
     padding: 16px;
+         
 }
 
 
-.formcontato__botao{
-    width: 150px;
-    height: 50px;
-    margin: 16px 8px 24px 0;
-    padding: 0;
-    color: white;
-    background-color: var(--blue);
-    border: none;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
-    transition:900ms;
-    -webkit-transition:900ms;
-    -moz-transition:900ms;
-    -ms-transition:900ms;
-    -o-transition:900ms;
-}
-
-.formcontato__botao:hover{
-    cursor: pointer;
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-}
-
-
-.formcontato__botao:active{
-    background-color: var(--cor-de-fundo-light);
-}
 /*footeer*/
 
 section.footer{
     width: 100%;   
+    margin-top: 48px;
+    background-color: var(--color-fondo-light);
+    border-top: dotted;
+    color: var(--white);
 }
 
 .footer__rodape{
@@ -492,10 +545,12 @@ Utiliza las referencias de los breakpoints @media abajo */
    }
 
    .experience__img{
-    width: 60%;    
-}
+        width: 60%;    
+    }
 
- 
+    section.about, section.skills, section.hobbies, section.formcontato{        
+        animation-range: entry 50% cover 80%;     
+    }    
 }
 
 /*Mobile*/
@@ -514,28 +569,57 @@ Utiliza las referencias de los breakpoints @media abajo */
     }       
 
     .title__bio{
-        font-size: 54px;
+        font-size: 48px;
     }
 
     .title__network{
         width: 80%;
     }
+
+    .title__network a{
+        font-size: 24px;
+    }
     .title__subsection{
         font-size: 22px;
     }
+
+    .about__title, .skills__title, .hobbies__title, .experience__section__title, .academic__title{
+        font-size: 30px;
+    }
+
     .about__paragraph{
         width: 60%;
+        font-size: 20px;    
     }
 
-    .skills__line{
+    .skills__line, .hobbies__line{
         justify-content: center;
+    }   
 
+    .skills_line .hobbies__name, .hobbies__line .hobbies__name{
+        font-size: 20px;
     }
-    .skills__box, .hobbies__box{
-        max-width: 16.6%;        
+    .skills__box{
+        width: 320px;   
+        height: 200px;      
+               
+   }
+
+   .hobbies__box{
+        width: 160px;
+        height: 200px; 
    }
     .academic__courses__item__img{     
         height: 250px;
+   }
+
+   .academic__courses__list h4{
+    font-size: 22px;
+    padding-top: 12px;
+   }
+
+   .academic__courses__list p{
+        font-size: 20px;
    }
 
     
@@ -575,5 +659,16 @@ Utiliza las referencias de los breakpoints @media abajo */
         display: flex;
         flex-direction: column;        
     }
+    section.about, section.skills, section.hobbies, section.formcontato{        
+        animation-range: entry 30% cover 50%;     
+    } 
 
+}
+
+.dark-mode{
+    --color-fondo:#1B1D1E;
+    --text-color:#C1CCCF;
+    --color-fondo-light:#293032;
+    --color-de-link: white;
+    --title-color:#5AA5C2;
 }

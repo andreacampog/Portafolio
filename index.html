@@ -20,7 +20,7 @@
     <div class="tudo">
     <section class="menu">
         <header class="menu__header">
-            <img src="assets\vector.png">
+            <img id="toogle-btn--img" class="switche" src="assets/moon.png"  >
             <h3 class="menu__title">Andrea Campo</h3>
         </header>
         <nav>
@@ -40,8 +40,9 @@
         <div class="title__div">
             <img class="title__profile" src="assets\profile.jpg">
             <div class="title__container">
-                <h2 class="title__bio">Hola, mi nombre es Andrea Campo soy desarrolladora Front- End</h2>
+                <h2 class="title__bio">Hola, mi nombre es Andrea Campo soy Colombiana y me preparo como desarrolladora Front- End </h2>                
                 <h3 class="title__subsection">Desarrollo con: HTML - CSS - JavaScript y actualmente estoy participando del proyecto Oracle ONE en Alura Latam.</h3>
+                
                 <ul class="title__network">
                      <!-- Pon los enlaces de tus redes sociales favoritas -->
                     <li class="title__network__item"><a href="https://github.com/andreacampog">Github <img src="assets\arrow.png"> </a></li>
@@ -169,11 +170,11 @@
     </section>
 
         <!-- Sección de Formación académica -->
-    <section class="academic" id="formacion">
-        <h2 class="academic__title" >Formación académica</h2>
+    <section class="academic" id="formacion" >
+        <h3 class="academic__title" >Formación académica</h3>
         <div class="academic__courses">
             <div class="academic__courses__box">
-                <ul class="academic__courses__list">
+                <ul class="academic__courses__list" id="animado">
                     <!-- Pon el logotipo de la institución de formación -->
                     <li class="academic__courses__item__img"><img src="assets/Platzi.jpg"></li>
                     <li class="academic__courses__item__title"><h4>Platzi</h4></li>
@@ -205,7 +206,7 @@
 
     <!-- Sección de Experiencia Profesional/Proyectos-->
     <section class="experience" id="xp">
-        <h2 class="experience__section__title" >Experiencia Profesional</h2>
+        <h3 class="experience__section__title" >Experiencia Profesional</h3>
         <div class="experience__box">
             <!-- Pon el logotipo/captura de pantalla de tu proyecto -->
             <img class="experience__img" src="assets/alura_game.PNG">
@@ -215,8 +216,8 @@
                 <h3 class="experience__text">Juego de 3 intentos por adivinar un número aleatorio generado</h3>
                     <div class="experience__description">
                         <!-- Pon el enlace del proyecto en Github o GithubPages -->
-                            <span class="experience__repo"><a href="https://andreacampog.github.io/AluraGame/"><button class="experiencia__botao--repo">Repositório</button></a></span>
-                            <span class="experience__demo"><a href=""><button class="experience__botao--demo">Ver demo</button></a></span>
+                            <span class="experience__repo"><a href="https://github.com/andreacampog/AluraGame"><button class="experiencia__botao--repo">Repositório</button></a></span>
+                            <span class="experience__demo"><a href="https://andreacampog.github.io/AluraGame/"><button class="experience__botao--demo">Ver demo</button></a></span>
                     </div>
             </div>
         </div>        
@@ -231,7 +232,7 @@
                     <div class="experience__description">
                         <!-- Pon el enlace del proyecto en Github o GithubPages -->
                             <span class="experience__repo"><a href="https://github.com/andreacampog/travel-agency"><button class="experiencia__botao--repo">Repositório</button></a></span>
-                            <span class="experience__demo"><a href=""><button class="experience__botao--demo">Ver demo</button></a></span>
+                            <span class="experience__demo"><a href="https://andreacampog.github.io/travel-agency/"><button class="experience__botao--demo">Ver demo</button></a></span>
                     </div>
             </div>
         </div>  
@@ -239,7 +240,7 @@
         <div class="experience__box">
             <!-- Pon el logotipo/captura de pantalla de tu proyecto -->
             <img class="experience__img" src="assets/encript.png">
-            <img class="experience__img" src="assets/encriptador_ipad.PNG">
+            <img class="experience__img" src="assets/encriptador_ipad.png">
 
             <div class="experience__info-container">
                 <h2 class="experience__title">Encriptador de texto - Responsive</h2>
@@ -247,7 +248,7 @@
                     <div class="experience__description">
                             <!-- Pon el enlace del proyecto en Github o GithubPages -->
                             <span class="experience__repo"><a href="https://github.com/andreacampog/encriptador-texto"><button class="experiencia__botao--repo">Repositório</button></a></span>
-                            <span class="experience__demo"><a href=""><button class="experience__botao--demo">Ver demo</button></a></span>
+                            <span class="experience__demo"><a href="https://andreacampog.github.io/encriptador-texto/"><button class="experience__botao--demo">Ver demo</button></a></span>
                     </div>
             </div>
         </div>  
@@ -260,8 +261,8 @@
                 <h3 class="experience__text">Challenge Oracle</h3>
                     <div class="experience__description">
                             <!-- Pon el enlace del proyecto en Github o GithubPages -->
-                            <span class="experience__repo"><a href="https://github.com/alura-challenges/challenge-one-juego-ahorcado"><button class="experiencia__botao--repo">Repositório</button></a></span>
-                            <span class="experience__demo"><a href=""><button class="experience__botao--demo">Ver demo</button></a></span>
+                            <span class="experience__repo"><a href="https://github.com/andreacampog/Portafolio"><button class="experiencia__botao--repo">Repositório</button></a></span>
+                            <span class="experience__demo"><a href="https://andreacampog.github.io/Portafolio/"><button class="experience__botao--demo">Ver demo</button></a></span>
                     </div>
         </div>
         </div>  
@@ -270,7 +271,7 @@
     <section class="formcontato" id="contacto">
         <div  class="formcontato__contacto">
             <div class="formcontato--esquerda">
-                <img class="formcontato__img" src="assets\contact_image.png">
+                <img class="formcontato__img" src="assets/contact_image_1.png">
             </div>
             <div class="formcontato__text">
                 <h2 class="formcontato__title">Contacto</h2>
@@ -280,8 +281,8 @@
                     <input class="formcontato__input" type="text" name="nombre" placeholder=" Nombre">
                     <input class="formcontato__input" type="email" name="email" placeholder=" E-mail">
                     <input class="formcontato__input" type="text" name="asunto" placeholder=" Asunto">
-                    <textarea class="formcontato__textarea" rows="5" cols="40" id="mensagem" name="mensaje" placeholder=" Mensaje"></textarea>
-                    <button type="submit" class="formcontato__botao">Enviar mensaje</button>
+                    <textarea class="formcontato__textarea" id="mensagem" name="mensaje" placeholder=" Mensaje"></textarea>
+                    <button type="submit" class="formcontato__botao">Enviar</button>
                 </form>
             </div>
         </div>
