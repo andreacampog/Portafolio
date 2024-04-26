@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
     <!-- Fonte del Proyecto Raleway -->
+
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
     
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -48,7 +49,7 @@
                     <li class="title__network__item"><a href="https://github.com/andreacampog">Github <img src="assets\arrow.png"> </a></li>
                     <li class="title__network__item"><a href="https://www.linkedin.com/in/andrea-campo-585bb31a/">Linkedin <img src="assets\arrow.png"></a></li>
                     <li class="title__network__item"><a href="https://www.instagram.com/andrea_campog/?igsh=MWNvNzBjcWQ2dXNnYw%3D%3D&utm_source=qr">Instagram <img src="assets\arrow.png"></a></li>
-                    <li class="title__network__item"><a href="">Currículo <img src="assets\arrow.png"></a></li>
+                    <li class="title__network__item"><a href="/assets/CvAndreaCampo.pdf" download="CurriculoClaudiaAndreaCampo.pdf">Curriculo</a></li>
                 </ul>
             </div>
         </div>
@@ -79,46 +80,25 @@
         <div class="skills__line">
             <div class="skills__box">
                 <ul>
-                    <li class="skills__img"><img src="assets\htlm.png"></li>
-                    <li class="skills__name"> HTML 5</li>
+                    <li class="skills__img"><span class="material-icons">html</span></li>
+                    <li class="skills__name">HTML 5</li>
                 </ul>
             </div>
 
             <div class="skills__box">
                 <ul>
-                    <li class="skills__img"> <img src="assets\js_icon.png" alt=""></li>
+                    <li class="skills__img"><span class="material-icons">javascript</span></li>
                     <li class="skills__name">Javascript</li>
                 </ul>
-            </div>
-
-            <!--div class="skills__box">
-                <ul>
-                    <li class="skills__img"> <img src="assets\php_icon.png" alt=""></li>
-                    <li class="skills__name">PHP</li>
-                </ul>
-            </!--div>
+            </div>           
 
             <div class="skills__box">
                 <ul>
-                    <li class="skills__img"><img src="assets\nodejs_icon.png" alt=""></li>
-                    <li class="skills__name">Node JS</li>
-                </ul>
-            </--div>
-
-            <div-- class="skills__box">
-                <ul>
-                    <li class="skills__img"> <img src="assets\react_icon.png" alt=""> </li>
-                    <li class="skills__name">React</li>
-                </ul>
-            </div-->
-
-            <div class="skills__box">
-                <ul>
-                    <li class="skills__img"> <img src="assets\css_icon.png" alt=""> </li>
+                    <li class="skills__img"><span class="material-icons">css</span></li>
                     <li class="skills__name">CSS</li>
                 </ul>
             </div>
-        </div-->
+        </div>
     </section>
 
     <!-- Sección de Hobbies -->
@@ -127,42 +107,54 @@
             <div class="hobbies__line">
                 <div class="hobbies__box">
                     <ul>
-                        <li class="hobbies__img"><img src="assets\skate_icon.png"></li>
-                        <li class="hobbies__name"> Montar bicicleta</li>
+                        <li class="hobbies__img"><span class="material-icons">
+                            directions_bike
+                            </span></li>
+                        <li class="hobbies__name">MTB</li>
                     </ul>
                 </div>
 
                 <div class="hobbies__box">
                     <ul>
-                        <li class="hobbies__img"><i class="material-icons">directions_run</i></li>
-                        <li class="hobbies__name">Gimnasio</li>
+                        <li class="hobbies__img"><span class="material-icons">
+                            fitness_center
+                            </span></li>
+                        <li class="hobbies__name">GYM</li>
                     </ul>
                 </div>
 
                 <div class="hobbies__box">
                     <ul>
-                        <li class="hobbies__img"> <img src="assets\headphones_icon.png" alt=""></li>
-                        <li class="hobbies__name">Oir música</li>
+                        <li class="hobbies__img"> <span class="material-icons">
+                            headphones
+                            </span></li>
+                        <li class="hobbies__name">Escuchar Música</li>
                     </ul>
                 </div>
 
                 <div class="hobbies__box">
                     <ul>
-                        <li class="hobbies__img"><i class="material-icons">directions_bike</i></li>
-                        <li class="hobbies__name">Montar bici</li>
+                        <li class="hobbies__img"><span class="material-icons">
+                            directions_run
+                            </span></li>
+                        <li class="hobbies__name">Correr</li>
                     </ul>
                 </div>
 
                 <div class="hobbies__box">
                     <ul>
-                        <li class="hobbies__img"> <img src="assets\forkspoon_icon.png" alt=""> </li>
+                        <li class="hobbies__img"><span class="material-icons">
+                            local_dining
+                            </span></li>
                         <li class="hobbies__name">Cocinar</li>
                     </ul>
                 </div>
 
                 <div class="hobbies__box">
                     <ul>
-                        <li class="hobbies__img"> <img src="assets\camera_icon.png" alt=""> </li>
+                        <li class="hobbies__img"><span class="material-icons">
+                            photo_camera
+                            </span></li>
                         <li class="hobbies__name">Fotografía</li>
                     </ul>
                 </div>
@@ -278,11 +270,11 @@
                 <h3 class="formcontato__subtext">¿Quieres contactarme?</h3>
                 <h3 class="formcontato__subtext">Completa el siguiente formulario y me pondré en contigo lo antes posible. </h3>
                 <form class="formcontato__form" name="form">
-                    <input class="formcontato__input" type="text" name="nombre" placeholder=" Nombre">
-                    <input class="formcontato__input" type="email" name="email" placeholder=" E-mail">
-                    <input class="formcontato__input" type="text" name="asunto" placeholder=" Asunto">
+                    <input  id="name" class="formcontato__input" type="text" name="nombre" placeholder=" Nombre" required maxlength="50">
+                    <input  id="email" class="formcontato__input" type="email" name="email" placeholder=" E-mail" required>
+                    <input  id="asunto" class="formcontato__input" type="text" name="asunto" placeholder=" Asunto" required maxlength="50">
                     <textarea class="formcontato__textarea" id="mensagem" name="mensaje" placeholder=" Mensaje"></textarea>
-                    <button type="submit" class="formcontato__botao">Enviar</button>
+                    <button id="enviar" onclick="capturarDatos();" type="button" class="formcontato__botao">Enviar</button>
                 </form>
             </div>
         </div>
@@ -297,6 +289,6 @@
     </section>
     </div>
  <!-- Script del documento JavaScript -->
-<script src="validacion.js"></script>
+<script src="/validacion.js"></script>
 </body>
 </html>

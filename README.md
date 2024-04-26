@@ -3,15 +3,20 @@
 
 #### Vistas responsive del proyecto:
 <p align="center" >
-     <img width="600" heigth="600" src="/assets/porta_ipad.png">
-     <img width="600" heigth="600" src="/assets/porta.png">
-      <img width="600" heigth="600" src="/assets/porta_macbook.png.png">
+     <img width="400" heigth="400" src="/assets/mobile_.png">
+     <img width="400" heigth="400" src="/assets/dark-mobile.png">
+     <img width="400" heigth="400" src="/assets/dark_ipad.png.png">
+     <img width="400" heigth="40" src="/assets/ipad.png">
+     <img width="400" heigth="400" src="/assets/mac.png">
+     <img width="400" heigth="400" src="/assets/dark_mac.png">
+     
 </p>
 
 
 ### ¡Bienvenido al proyecto de mi Portafolio ! Pasos principales:
 ---
-#### Deploy: https://github.com/andreacampog/Portafolio/deployments/github-pages
+#### Deploy: https://andreacampog.github.io/Portafolio/
+
 
 
 ---
@@ -21,6 +26,25 @@
 #### 🔹validacion.js: Documento JS para validación de formulario
 
 ---
-#### 🔹Iré agregando algunas animaciones con CSS
+#### 🔹Animaciones usando CSS 
+#### 🔹Dark-mode
+
+#### 🔹Uso el localStorage para tener persistencia en los datos ingresados al formulario dentro del navegador: 
+
+##### si deseas limpiar tras varios intentos ve a la consola del navegador: 
+
+```[javascript]
+// localStorage.removeItem('usuarios');
+```
+#### si deseas acceder a los datos almacenados desde la consola del navegador: 
+
+```[javascript]
+//JSON.parse(localStorage.getItem('usuarios'))
+```
+
+
+
+
+
 
 
