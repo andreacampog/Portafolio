@@ -178,9 +178,6 @@ section.title{
     -o-border-radius: 5px ;
 }
 
-
-
-
 /*Sección About*/
 
 section.about{
@@ -189,6 +186,9 @@ section.about{
     animation: size linear both;
     animation-timeline:view();
     animation-range: entry 20% cover 50%;     
+    -webkit-animation: size linear both;
+    -webkit-animation-timeline:view();
+    -webkit-animation-range: entry 20% cover 50%;  
 }
 
 .about__container{   
@@ -516,11 +516,6 @@ section.footer{
 .footer__rodape{
     text-align: center ;
 }
-
-/* Vamos a desafiarnos trabajando con responsividad?
-Utiliza las referencias de los breakpoints @media abajo */
-
-
 
 
 /*Tablet*/
