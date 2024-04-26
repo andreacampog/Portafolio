@@ -86,15 +86,6 @@ section.menu{
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;  
     animation-delay: 1s;   
-    -webkit-animation-name: change_text_color;
-    -webkit-animation-duration: 3s;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: infinite;  
-    -webkit-animation-delay: 1s;   
-    
-    
-    
-
 }
 
 @keyframes change_text_color{
@@ -178,10 +169,6 @@ section.title{
     animation-duration: 3s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-    -webkit-animation-name: change_text_color;
-    -webkit-animation-duration: 3s;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: infinite;  
     padding: 4px;
     border: 1px solid var(--title-color);    
     border-radius: 5px ;
@@ -202,9 +189,6 @@ section.about{
     animation: size linear both;
     animation-timeline:view();
     animation-range: entry 20% cover 50%;     
-    -webkit-animation: size linear both;
-    -webkit-animation-timeline:view();
-    -webkit-animation-range: entry 20% cover 50%;    
 }
 
 .about__container{   
@@ -231,9 +215,6 @@ section.skills, section.hobbies{
     animation: size linear both;
     animation-timeline:view();
     animation-range: entry 20% cover 50%;     
-    -webkit-animation: size linear both;
-    -webkit-animation-timeline:view();
-    -webkit-animation-range: entry 20% cover 50%;  
     
 }
 
@@ -295,9 +276,6 @@ section.academic{
     animation: size linear both;
     animation-timeline:view();
     animation-range: entry 20% cover 50%;   
-    -webkit-animation: size linear both;
-    -webkit-animation-timeline:view();
-    -webkit-animation-range: entry 20% cover 50%; 
 }
 
 @keyframes size{
@@ -394,9 +372,6 @@ section.experience{
     animation: reveal linear both ;
     animation-timeline:view();
     animation-range: entry 20% cover 50%;    
-    -webkit-animation: reveal linear both ;
-    -webkit-animation-timeline:view();
-    -webkit-animation-range: entry 20% cover 50%;  
 }
 
 
@@ -458,7 +433,6 @@ section.experience{
 .experience__repo button:hover, .experience__demo button:hover, .formcontato__botao:hover{
     cursor: pointer;
     transform: scale(1.1);
-    -webkit-transform: scale(1.1);
 }
  
 /*Contacto*/
@@ -472,10 +446,6 @@ section.formcontato{
     animation: size linear both;
     animation-timeline:view();
     animation-range: entry 10% cover 30%;  
-    animation: size linear both;
-    -webkit-animation-timeline:view();
-    -webkit-animation-range: entry 10% cover 30%; 
-    -webkit-animation: size linear both;
     color: var(--text-color);
     padding-top: 32px;
 }
@@ -598,13 +568,11 @@ Utiliza las referencias de los breakpoints @media abajo */
 
     section.skills, section.hobbies{
         animation-range: entry 5% cover 100%;
-        -webkit-animation-range: entry 5% cover 100%;
 
     }
     
     .section.formcontato{  
         animation-range: entry 5% cover 100%;     
-        -webkit-animation-range: entry 5% cover 100%;     
     }    
 }
 
@@ -745,7 +713,6 @@ Utiliza las referencias de los breakpoints @media abajo */
     }
     section.about, section.skills, section.hobbies{        
         animation-range: entry 20% cover 40%;     
-        -webkit-animation-range: entry 20% cover 40%; 
     } 
 
 }
