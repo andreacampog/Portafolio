@@ -26,6 +26,11 @@ function capturarDatos(){
         return; // Detener la función si algún campo está vacío
     }
 
+    if (mensaje.length >300){
+        alert('El mensaje puede contener hasta 300 caracteres');
+        return; // Detener la función si el campo mensaje es mayor a 300
+    }
+
      // Verificar si el formato del correo electrónico es válido
      //usando una expresion regular que básicamente es un patrón
      let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -39,7 +44,7 @@ function capturarDatos(){
         email: email,
         asunto: asunto,
         mensaje: mensaje
-    };    
+    };          
 
     
     // Verificamos si ya hay datos en localStorage
@@ -52,18 +57,46 @@ function capturarDatos(){
     // Guardamos la lista actualizada en localStorage
     localStorage.setItem('usuarios', JSON.stringify(usuarios));   
 
-    console.log(usuarios);
+    console.log(usuarios);  
 
-   
+
+    // // Agregamos el nuevo usuario a la lista
+    // let usuarios =[];
+    // usuarios.push(user);       
+    // imprimir(usuarios);   
 }
 
 // function imprimir(usuarios){
-//     usuarios.forEach(user=> {          
-//         console.log(user);  
-        
-//     });       
+//      usuarios.forEach(user=> {          
+//          console.log(user);          
+//    });       
 
 // }
+
+//funcion para limpiar campos input debido a que utilice un type button en vez de un submit
+//lo hice porque queria ver los datos en el console.log
+
+document.getElementById('enviarFormulario').addEventListener('click', function() {
+    var formulario = document.getElementById('miFormulario');
+    var campos = formulario.getElementsByTagName('input');       
+
+    for (var i = 0; i < campos.length; i++) {
+        campos[i].value = ''; 
+    }
+});
+
+
+//funcion para limpiar el campo textarea debido a que utilice un type button en vez de un submit
+//lo hice porque queria ver los datos en el console.log
+
+document.getElementById('enviarFormulario').addEventListener('click', function() {
+    var formulario = document.getElementById('miFormulario');
+    var campos = formulario.getElementsByTagName('textarea');       
+
+    for (var i = 0; i < campos.length; i++) {
+        campos[i].value = ''; 
+    }
+});
 
 
 
